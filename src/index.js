@@ -13,7 +13,7 @@ const params = {
 };
 
 client
-  .fetch("query", params)
+  .fetch(query, params)
   .then(result => {
     renderSlides(result);
     window.Reveal.initialize(result.reveal);
