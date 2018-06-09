@@ -1,0 +1,19 @@
+{
+  "name": "parcel-sandbox",
+  "version": "1.0.0",
+  "description": "Simple Parcel Sandbox",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "@sanity/block-content-to-html": "1.3.6",
+    "@sanity/client": "0.132.2",
+    "@sanity/image-url": "0.132.2",
+    "hyperscript": "2.0.2"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.6.1"
+  }
+}
