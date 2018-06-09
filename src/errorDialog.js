@@ -7,7 +7,11 @@ module.exports = client => `<svg xmlns="http://www.w3.org/2000/svg" width="200" 
     <path d="M266 229l4 7 3 6-3 4c-4 3-5 6-3 7 1 1 8-1 10-3l3-2 6 6c7 7 9 8 9 4l-5-8-6-6 3-4c4-4 4-7 1-8-3-2-3-1-7 2l-3 3-5-5c-5-6-7-6-7-3zm63 16l-2 7-4 18c-2 9-2 11-1 13 2 5 15 11 17 8 1-1 0-4-2-4l-6-3-3-2 2-5c3-12 5-26 3-30-1-3-3-4-4-2zm46 6l3 5 3 4-5 6c-3 4-4 5-3 6 2 3 8 2 11-1 2-3 2-3 6 3 1 3 6 7 7 7v-7l-3-5-3-4 5-6c6-4 6-5 5-7-2-4-6-4-11 2l-3 3-5-4c-5-4-7-5-7-2zm-78 52c-1 2 1 4 3 4l4 1 7 1 8 2c3 1 3 1 3 8 0 8 2 13 6 18 4 4 8 5 15 5 9 1 13-4 13-17l2-8c4 1 18 4 20 6 4 2 6 1 6-1 0-5-5-8-16-10l-19-3-29-5-16-2c-6-1-7-1-7 1zm36 11v6c0 4 1 5 3 8 3 3 4 2 4-6-1-8-1-8 6-6 4 0 4 1 4 3 0 6-2 12-5 14s-3 3-7 2c-6-1-9-5-9-11l-1-8c0-3 0-3 2-3l3 1z" />
   </svg><h2>Rats! Couldn't connect with the Sanity backend</h2>
     <ul>
-    <li>Have you set <strong>projectId</strong> and <strong>dataset</strong> in config.js?</li>
+    <li>Have you set the correct <strong>projectId</strong> and <strong>dataset</strong> in config.js? <pre>${JSON.stringify(
+      client.clientConfig,
+      null,
+      2
+    )}</li>
     <li>Remember to add <code>${
       document.location.href
     }</code> to your <a href="https://manage.sanity.io/projects/${

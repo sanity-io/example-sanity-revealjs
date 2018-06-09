@@ -15,9 +15,7 @@ const h = require("hyperscript");
 const client = sanityClient({
   projectId: "0wopf0m0",
   dataset: "production",
-  useCdn: true,
-  token:
-    "skkLnj7MDW0ZKJ2turNVRuXqqoEUhwNPsUlAbbS4xCbhKuhoAp2jIgBnuNxEZbhX3PW9ZxtOdgfYAtZHzvAyFExA88JiqkSDOCQdYRrlOPuHV8xb3XFm7P4MlalPepnSgAwK1lWkFC1uZso8zTA0f5WJZ8tYJZald7PQKkwGM18SCCBWjOJt"
+  useCdn: true
   /* token: 'sanity-auth-token', // or leave blank to be anonymous user */
 });
 
