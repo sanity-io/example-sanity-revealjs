@@ -19,6 +19,11 @@ const client = sanityClient({
   /* token: 'sanity-auth-token', // or leave blank to be anonymous user */
 });
 
+/**
+ * Insert the slug for the slide deck you want to load
+ */
+const slug = "sanity-backed-reveal.js-example";
+
 function urlFor(source) {
   return source ? imageUrlBuilder(client).image(source) : undefined;
 }
@@ -36,5 +41,6 @@ module.exports = {
   h,
   imageUrl,
   imageUrlBuilder,
-  urlFor
+  urlFor,
+  slug
 };

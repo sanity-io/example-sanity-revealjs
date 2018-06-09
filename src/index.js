@@ -1,4 +1,4 @@
-const { client, imageUrl, h, blocksToHtml } = require("./config.js");
+const { client, imageUrl, h, blocksToHtml, slug } = require("./config.js");
 const serializers = require("./serializers");
 const errorDialog = require("./errorDialog");
 const joinTransitions = transitions => transitions.join(" ");
@@ -9,7 +9,7 @@ const joinTransitions = transitions => transitions.join(" ");
  */
 const query = '*[_type == "talk" && slug.current == $slug][0]';
 const params = {
-  slug: "sanity-backed-reveal.js-example"
+  slug
 };
 
 client
