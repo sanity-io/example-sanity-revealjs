@@ -49,8 +49,7 @@ function renderSlides({ slides = [], reveal: config = {} }) {
    * Appends slides to the root revealjs HTML structure, if
    * there isn't any body content it just leaves an empty div.
    */
-  slides.forEach(slide => {
-    const { background = {}, content = [], transitions = [] } = slide;
+  slides.forEach(({ background = {}, content = [], transitions = [] }) => {
     document.getElementById("slides").appendChild(
       h(
         "section",
