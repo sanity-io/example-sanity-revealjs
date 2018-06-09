@@ -1,6 +1,6 @@
 const { client, imageUrl, h, blocksToHtml } = require("./config.js");
 const serializers = require("./serializers");
-
+const errorDialog = require("./errorDialog");
 const joinTransitions = transitions => transitions.join(" ");
 
 /**
@@ -12,10 +12,19 @@ const params = {
   slug: "sanity-backed-reveal.js-example"
 };
 
-client.fetch(query, params).then(result => {
-  renderSlides(result);
-  window.Reveal.initialize(result.reveal);
-});
+client
+  .fetch(query, params)
+  .then(result => {
+    renderSlides(result);
+    window.Reveal.initialize(result.reveal);
+  })
+  .catch(() => {
+    const body = document.getElementById("root");
+    const dialog = document.createElement("dialog");
+    dialog.innerHTML = errorDialog(client);
+    body.appendChild(dialog);
+    dialog.showModal();
+  });
 
 /**
  * Read more about real time updates
