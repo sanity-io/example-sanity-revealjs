@@ -18,7 +18,10 @@ module.exports = {
         asset._ref.split("-")[1]
       }.${asset._ref.split("-")[2]}`;
       //
-      return h("video", { src: fileUrl, attrs: { "data-autoplay": autoplay } });
+      return h("video", {
+        src: fileUrl,
+        attrs: { autoplay: autoplay, playsinline: autoplay }
+      });
     },
     image: ({
       node: { markDefs = [], asset = "", position = "full", caption = "" } = {}

@@ -1,7 +1,7 @@
 {
-  "name": "parcel-sandbox",
+  "name": "sanity-backed-revealjs-slide-deck",
   "version": "1.0.0",
-  "description": "Simple Parcel Sandbox",
+  "description": "Live updating slide deck frontend",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
@@ -15,5 +15,6 @@
   },
   "devDependencies": {
     "parcel-bundler": "^1.6.1"
-  }
+  },
+  "keywords": ["javascript", "reveal.js", "sanity", "slide deck", "observables"]
 }
